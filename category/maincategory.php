@@ -28,6 +28,7 @@
 <?php } ?>
 </div>
 <br />
+<div class="botnixtextdescription">
 <?php print $this->category->description?>
-
+</div>
 </div>

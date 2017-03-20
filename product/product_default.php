@@ -16,12 +16,12 @@ $templateDir = JURI::base() . 'templates/' . $app->getTemplate();
 <div class="jshop productfull">
 <?php /*?><h1 class="header-category"><?php print $this->category_id?></h1><?php */?>
 <?php // var_dump($this); die(); ?>
-<div class="productdetails span9 first">
+<div class="productdetails span8 first">
     <h1 class="pro-title"><?php print $this->product->name?></h1>
     <?php print $this->_tmp_product_html_start;?>	
 	 
         
-    <div class="jshop-video-image span7">
+    <div class="jshop-video-image span4">
 		<div class="block-images">		
 			<div class="image-middle">
 	    <?php print $this->_tmp_product_html_before_image;?>
@@ -100,7 +100,7 @@ $templateDir = JURI::base() . 'templates/' . $app->getTemplate();
 		</div>
     </div><!--End jshop-video-image-->
 
-	<div class="pro-info span5">	
+	<div class="pro-info span3">	
 	<form name="product" method="post" action="<?php print $this->action?>" enctype="multipart/form-data" autocomplete="off">    
 	    
 	    <?php if ($this->config->show_product_code){?> <div class="jshop_code_prod"><span><?php print _JSHOP_EAN?>:&nbsp;</span><span id="product_code">(<?php print $this->product->getEan();?>)</span></div><?php }?>
@@ -349,7 +349,7 @@ $templateDir = JURI::base() . 'templates/' . $app->getTemplate();
 	<?php
 	if ($this->config->product_show_button_back){?>
 	<div class="button_back">
-	<input type="button" class="button" value="<?php print _JSHOP_BACK;?>" onclick="<?php print $this->product->button_back_js_click;?>" />
+	<input type="button" class="button btn btn-default" value="<?php print _JSHOP_BACK;?>" onclick="<?php print $this->product->button_back_js_click;?>" />
 	</div>
 	<?php }?>
 

@@ -29,6 +29,7 @@
 </div>
 <?php include(dirname(__FILE__)."/products.php");?>
 <br />
+<div class="botnixtext">
 <?php 
 	if((int)$_REQUEST['strat']>0||(int)$_REQUEST['limitstart']>0){
 		
@@ -36,4 +37,5 @@
 		print $this->category->description;
 	}
 ?>
+</div>
 </div>

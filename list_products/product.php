@@ -20,15 +20,7 @@ $table_product = JTable::getInstance('product', 'jshop');
 <div class="product productitem_<?php print $product->product_id?>">
 <form name="product" method="post" action="/index.php?option=com_jshopping&amp;controller=cart&amp;task=add&amp;Itemid=0" enctype="multipart/form-data" autocomplete="off">
 	<div class="product-inner">
-		<?php /*?><div class="title-cate"><i class="icon-th-list"></i><?php print $product->category_id?></div><?php */?>
-		<div class="image">
-			<?php if ($product->image){?>
-			<?php 
-				$img_url_thumb = $product->image;
-				$img_url_full = str_replace("thumb","full",$product->image);
-			 ?>
-			<div class="image_block">
-				<?php if ($product->label_id){?>
+<?php if ($product->label_id){?>
 					<div class="product_label">
 						<?php if ($product->_label_image){?>
 							<img src="<?php print $product->_label_image?>" alt="<?php print htmlspecialchars($product->_label_name)?>" />
@@ -37,6 +29,16 @@ $table_product = JTable::getInstance('product', 'jshop');
 						<?php }?>
 					</div>
 				<?php }?>
+	<div class="product-inner-boxshadow">
+		<?php /*?><div class="title-cate"><i class="icon-th-list"></i><?php print $product->category_id?></div><?php */?>
+		<div class="image">
+			<?php if ($product->image){?>
+			<?php 
+				$img_url_thumb = $product->image;
+				$img_url_full = str_replace("thumb","full",$product->image);
+			 ?>
+			<div class="image_block">
+				
 				<a href="<?php print $product->product_link?>">
 					<img class="jshop_img" src="<?php print $img_url_full//$product->image?>" alt="<?php print htmlspecialchars($product->name);?>" />
 				</a>
@@ -110,6 +112,8 @@ $table_product = JTable::getInstance('product', 'jshop');
 				
 				<?php print $product->_tmp_var_buttons;?>		
 			  
+
+			</div>
 			</div>
 			<?php print $product->_tmp_var_bottom_buttons;?>
 			
